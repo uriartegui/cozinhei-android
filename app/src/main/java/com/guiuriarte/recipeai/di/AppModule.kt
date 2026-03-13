@@ -1,0 +1,71 @@
+package com.guiuriarte.recipeai.di
+
+import com.guiuriarte.recipeai.BuildConfig
+import com.guiuriarte.recipeai.data.api.AiService
+import com.guiuriarte.recipeai.data.api.UnsplashService
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Named
+import javax.inject.Singleton
+
+@Module
+@InstallIn(SingletonComponent::class)
+object AppModule {
+
+    @Provides
+    @Singleton
+    @Named("ai")
+    fun provideAiOkHttpClient(): OkHttpClient {
+        val logging = HttpLoggingInterceptor().apply {
+            level = HttpLoggingInterceptor.Level.BODY
+        }
+        return OkHttpClient.Builder()
+            .addInterceptor(logging)
+            .addInterceptor { chain ->
+                val request = chain.request().newBuilder()
+                    .addHeader("Authorization", "Bearer ${BuildConfig.OPENAI_API_KEY}")
+                    .build()
+                chain.proceed(request)
+            }
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    @Named("ai")
+    fun provideAiRetrofit(@Named("ai") okHttpClient: OkHttpClient): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl("https://api.groq.com/openai/")
+            .client(okHttpClient)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideAiService(@Named("ai") retrofit: Retrofit): AiService {
+        return retrofit.create(AiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    @Named("unsplash")
+    fun provideUnsplashRetrofit(): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl("https://api.unsplash.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideUnsplashService(@Named("unsplash") retrofit: Retrofit): UnsplashService {
+        return retrofit.create(UnsplashService::class.java)
+    }
+}
