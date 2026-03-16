@@ -15,11 +15,11 @@ val localProperties = Properties().apply {
 }
 
 android {
-    namespace = "com.guiuriarte.recipeai"
+    namespace = "com.guiuriarte.cozinhei"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.guiuriarte.recipeai"
+        applicationId = "com.guiuriarte.cozinhei"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

@@ -1,4 +1,4 @@
-# 🍳 RecipeAI
+# 🍳 Cozinhei
 ### Gerador Inteligente de Receitas com IA
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-orange)
 ![Platform](https://img.shields.io/badge/platform-Android-brightgreen)
@@ -10,11 +10,11 @@
 
 > ⚠️ **Este é um projeto proprietário.** O código-fonte está disponível apenas para visualização. Cópia, uso comercial ou distribuição são proibidos sem autorização prévia. Veja [LICENSE](./LICENSE).
 
-RecipeAI é um app Android que usa Inteligência Artificial para gerar receitas personalizadas com base nos ingredientes que você tem em casa, na categoria que você quer cozinhar ou em filtros como "Rápido", "Saudável" e "Gourmet". As receitas são geradas com passos detalhados e profissionais, fotos reais e ajuste automático de quantidades para qualquer número de pessoas.
+Cozinhei é um app Android que usa Inteligência Artificial para gerar receitas personalizadas com base nos ingredientes que você tem em casa, na categoria que você quer cozinhar ou em filtros como "Rápido", "Saudável" e "Gourmet". As receitas são geradas com passos detalhados e profissionais, fotos reais e ajuste automático de quantidades para qualquer número de pessoas.
 
 ---
 
-## 💡 O que o RecipeAI resolve
+## 💡 O que o Cozinhei resolve
 
 Quem cozinha em casa enfrenta todo dia os mesmos problemas:
 
@@ -23,7 +23,7 @@ Quem cozinha em casa enfrenta todo dia os mesmos problemas:
 - Receitas com passos vagos e sem quantidades precisas.
 - Dificuldade de adaptar receitas para mais ou menos pessoas.
 
-RecipeAI resolve isso gerando receitas sob medida, com ingredientes que você realmente tem, para o número de pessoas que precisa, com instruções detalhadas passo a passo.
+Cozinhei resolve isso gerando receitas sob medida, com ingredientes que você realmente tem, para o número de pessoas que precisa, com instruções detalhadas passo a passo.
 
 ---
 

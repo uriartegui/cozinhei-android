@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "RecipeAI"
+rootProject.name = "Cozinhei"
 include(":app")
