@@ -143,24 +143,6 @@ UNSPLASH_ACCESS_KEY=sua_chave_unsplash_aqui
 
 ---
 
-## 🚀 Como executar
-
-**Pré-requisitos:**
-- Android Studio Hedgehog ou superior
-- JDK 21
-- Android SDK 35
-
-```bash
-# Clone o repositório
-git clone https://github.com/guiuriarte/recipe-ai-android
-
-# Abra no Android Studio
-# Configure o local.properties com as API keys
-# Execute em um dispositivo ou emulador (API 26+)
-```
-
----
-
 ## 📱 Telas do app
 
 | Tela | Descrição |
