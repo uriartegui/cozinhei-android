@@ -128,21 +128,6 @@ Exibe cards com nome, tempo, foto e badge de categoria
 
 ---
 
-## 🔑 Configuração das APIs
-
-Crie o arquivo `local.properties` na raiz do projeto com as chaves:
-
-```properties
-OPENAI_API_KEY=sua_chave_groq_aqui
-UNSPLASH_ACCESS_KEY=sua_chave_unsplash_aqui
-```
-
-> **Groq API:** https://console.groq.com
-> **Unsplash:** https://unsplash.com/developers
-> **TheMealDB:** gratuita, sem chave necessária
-
----
-
 ## 📱 Telas do app
 
 | Tela | Descrição |
